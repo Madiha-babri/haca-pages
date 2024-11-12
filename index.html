@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome and google fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>General Knowledge</title>
+</head>
+
+<body>
+    <main class="container">
+        <!-- logo -->
+        <section id="logo">
+            <img src="assets/images/logo.png" alt="avengers logo">
+        </section>
+
+        <!-- intro -->
+        <section id="intro">
+            <ul>
+                <li class="li1"> Click "lets check" to find out your General knowledge level by answering 10 simple questions</li>
+            </ul>
+
+        </section>
+
+        <!-- start button -->
+        <section id="start">
+            <button id="start-button"> LETS CHECK </button>
+        </section>
+
+
+        <!-- quiz game area -->
+        <section id="game" class="hide">
+            <span id="question"></span>
+            <br>
+            <div id="qbuttons">
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <br>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+        </section>
+
+        <!-- player results -->
+        <div id="results" class="hide">
+            <p id="final-result"></p>
+        </div>
+
+        <div class="score-area">
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+
+        <!-- restart button -->
+        <button id="restart-button" class="hide">Play again</button>
+    </main>
+
+
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/552664b17c.js" crossorigin="anonymous"></script>
+    <!-- scripts -->
+    <script src="assets/js/script.js" defer></script>
+
+</body>
+
+</html>
