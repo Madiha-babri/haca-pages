@@ -5,7 +5,7 @@ let questionSpan = document.getElementById("question");
 let buttons = document.querySelectorAll(".btn");
 let results = document.getElementById("results");
 let finalResult = document.getElementById("final-result");
-let totalPoints = 0;
+let totalCorrect = 0;
 let currentQuestion = 0;
 let shuffleQuestions;
 let shuffledChoices;
@@ -32,14 +32,16 @@ function getNextQuestion() {
             shuffledChoices.forEach((choice, choiceIndex) => {
                 buttons.forEach((btn, buttonIndex) => {
                     if (choiceIndex == buttonIndex) {
-                        btn.innerText = choice.option;
-                        btn.dataset.points = choice.points;
+                        btn.innerText = choice.option;}
+                    if (choice.correct){
+                        btn.dataset.correct = choice.correct;
                     }
                 });
             });
         }
     });
 }
+
 
 // buttons for each question
 buttons.forEach(btn => {
@@ -48,38 +50,38 @@ buttons.forEach(btn => {
 
 // function for when the user selects a button to add points
 function userSelectedButton(e) {
-    totalPoints += parseInt(e.target.dataset.points);
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if (isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
     currentQuestion += 1;
-    if (currentQuestion < 12) {
+    if (currentQuestion < 3) {
         getNextQuestion();
     } else {
         calculateResults();
     }
 }
 
+
 // this function counts how many points a user has, it then calculates the points to give the results 
 function calculateResults() {
     let result = "";
-    if (totalPoints <= 4) {
-        result = `Thor! Because like Thor, you have a very charming personality! You know how to work a room, with your bold, energetic presence!`;
-    } else if (totalPoints > 4 && totalPoints <= 8) {
-        result = "Captain America! Sweet, kind and thoughtful are the words to describe your personailty as well as Cap A! Always working to serve others, because helping others is your main focus.";
-    } else if (totalPoints > 8 && totalPoints <= 12) {
-        result = "Nick Fury! Along with your witty personality, sharp workmanship and even better sense of humor is your ability to take the lead. You are a decisive, capable. principled person.";
-    } else if (totalPoints > 12 && totalPoints <= 18) {
-        result = "Ironman! You love being the center of attention? Whilst being an extrovert, and the center of every room you have a brain that works like no other. You are hugely intelligent, and caring. ";
-    } else if (totalPoints > 18 && totalPoints <= 24) {
-        result = "Black Widow! You are very practical. Although you love to be free, you are drawn to understand how things work. Things never slide by you.";
-    } else if (totalPoints > 24 && totalPoints <= 29) {
-        result = "Hulk! As an extremely emotional indiviual with a slight temper problem, you relate most you the Hulk! Do you have trouble remembering important dates? Well so does he!";
-    } else if (totalPoints > 29 && totalPoints <= 36) {
-        result = "Hawkeye! A very strong introvert. You think very logically, extremely observant of what goes on around you in the real world.";
+    if (totalCorrects <= 3 ) {
+        result = `Average! your level of knowledge is calculated according to your correct answers.`;
+    } else if (totalCorrects > 3 && totalCorrects <= 6) {
+        result = "Moderate! your knowledge level is moderate and it is calculated according to your number of correct answers";
+    } else if (totalCorrects > 8 && totalCorrects <= 10) {
+        result = "Higher!  according to your given answers your level of Knowledge is higher.";
     }
 
     // add hide and remove hides for when certain buttons are clicked
     finalResult.classList.remove("hide");
     game.classList.add("hide");
-    finalResult.innerText = `Your personality is most similar to ${result}`;
+    finalResult.innerText = `congratulations ${result}`;
     results.classList.remove("hide");
     restart.classList.remove("hide");
 }
@@ -92,6 +94,86 @@ function resetGame() {
     startBtn.classList.remove("hide");
     intro.classList.remove("hide");
     currentQuestion = 0;
-    totalPoints = 0;
+    totalCorrects = 0;
     finalResult.classList.add("hide");
 }
+const questions = [{
+    question: "How many days does it take for the Earth to orbit the Sun?",
+    choices: [{
+            option: "360",
+            correct: false
+        },
+        {
+            option: "365",
+            correct: true
+        },
+        {
+            option: "350",
+            correct: false
+        },
+        {
+            option: "356",
+            correct: false
+        }
+    ]
+},
+{
+    question: "What country has the most islands in the world?",
+    choices: [{
+            option: "England",
+            correct: false
+        },
+        {
+            option: "Sweden",
+            correct: true
+        },
+        {
+            option: "Australia",
+            correct: false
+        },
+        {
+            option: "Germany",
+            correct: false
+        }
+    ]
+},
+{
+    question: "When was Netflix founded?",
+    choices: [{
+            option: "2007",
+            correct: false
+        },
+        {
+            option: "1997",
+            correct: true
+        },
+        {
+            option: "2014",
+            correct: false
+        },
+        {
+            option: "1994",
+            correct: false
+        }
+    ]
+},
+{
+    question: "What country has the most islands in the world?",
+    choices: [{
+            option: "England",
+            correct: false
+        },
+        {
+            option: "Sweden",
+            correct: true
+        },
+        {
+            option: "Australia",
+            correct: false
+        },
+        {
+            option: "Germany",
+            correct: false
+        }
+    ]
+}]

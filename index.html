@@ -18,13 +18,12 @@
     <main class="container">
         <!-- logo -->
         <section id="logo">
-            <img src="assets/images/logo.png" alt="avengers logo">
         </section>
 
         <!-- intro -->
         <section id="intro">
             <ul>
-                <li class="li1"> Click "lets check" to find out your General knowledge level by answering 10 simple questions</li>
+                <li class="li1"> Click "lets check" to find out your General knowledge level by answering 10 simple questions.</li>
             </ul>
 
         </section>
@@ -47,20 +46,21 @@
                 <button class="btn"></button>
             </div>
         </section>
-
-        <!-- player results -->
-        <div id="results" class="hide">
-            <p id="final-result"></p>
+    <!--Next Button-->
+        <button id="next-btn" data-type="submit" class="next-btn hide">Next Question</button>
+        <!--Number of the question-->
+        <div class="question-counter">
+            <p><span id="question-number">1</span>/<span>10</span></p>
         </div>
-
-        <div class="score-area">
-            <p class="scores">Correct Answers <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
-        </div>
-
-        <!-- restart button -->
-        <button id="restart-button" class="hide">Play again</button>
-    </main>
+    </div>
+    <!--Result Display-->
+    <div id="result-box" class="hide">
+        <p>You achieved the score of: <span id="user-score">0</span>/10!</p>
+        <br>
+        <div id="personal-message">Personal message</div>
+        <button id="start-new-game-btn">Start a New Questionaire!</button>
+    </div>
+</div>
 
 
     <!-- font-awesome -->
