@@ -1,131 +1,120 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gaming Quiz
+General Knowledge quiz is my first hackathone project developed as part of the Code Institute Full Stack Software Developer Bootcamp, consisting of learning outcomes to utilise HTML5, CSS3 & Bootstrap and agile methodology in order to fulfil the necessary requirements.
 
-Welcome Madiha Babri,
+<img src="assets/images/main.png">
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The live project can found here: <a href="https://madiha-babri.github.io/assignment/" rel="nofollow">General Knowledge Quiz</a>
+# Purpose 
 
-## Gitpod Reminders
+## User Stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
++ Wants an interactive Front-End web application using HTML, CSS and JavaScript based on the principles of user experience design, accessibility, and responsivity.
++ Wants to create a site Using an Agile methodology to plan and design a Front-End Web application.
++ Wants to Maximise future maintainability through documentation, code structure, and organisation.
++ Responsive design that adheres to all necessary standards and accessibility requirements.
++ Use an Agile methodology to plan and design a Front End Web application.
++ The site’s users want to play an online quiz to test general/specific knowledge such as sports/movies/literary knowledge or personality assessment.
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Design
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+Color selection is a key component to any design process, Safeguarding the planet Earth requires to show bright beautifull colors. Water, land, Grass these are the main elements in showing colors of our earth. The artwork and color selection thus played a integral part in the design of this project as they were essential in creating a welcoming and appropriate page for the end user and their specific needs
 
-A blue button should appear to click: _Make Public_,
+So, keeping in mind the combination of blue and green, theme of the website was set accordingly. I was able to determine an appropriate color scheme that is aesthetically pleasing whilst being both calming and engaging.
 
-Another blue button should appear to click: _Open Browser_.
+<img src="assets/images/20241023_132450.jpg">
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Fonts
 
-To log into the Heroku toolbelt CLI:
+As with color, font was a big consideration for ensuring a positive user experience whilst visiting the page.
+Two sans-serif fonts were selected for the project, and implemented via Google Fonts using a direct import code within the style.css file.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<a href="https://fonts.google.com/specimen/Roboto" rel="nofollow">Roboto</a> was proven to be the best choice for the creation of this project.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Different sizes ranging from 100 till 700 were used.
+## Imagery
+The image selection became a key influence in the design of the overall project, including naming and branding.
+#### Hero section
+Image for hero section was selected after careful consideration. It represents the deep colors of Earth fading away that needs to be safeguarded.
+<img src="assets/images/hero.png">
 
-### Connecting your Mongo database
+#### Video Container
+This part was selected to show a video of ocean, to appeal users attention towards the fact that oceans need to be saved to save water, relatively saving Earth.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+<img src="assets/images/video.png">
 
-------
+#### Action Container
+Here I used background picture of green earth ball to appeal users attention towards 10 actions that can safeguard Earth.
 
-## Release History
+<img src="assets/images/reasons.png">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+##### Cards section
+Here the image of recycling hand is used to appeal users towards need of using three important R's of safeguarding Earth.
 
-**June 18, 2024,** Add Mongo back into template
+<img src="assets/images/R.png">
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## Features
+#### General Features
+In order to fulfil the criteria the page consists of various sectioned information each with a variety of links, resources and other elements that contribute to a positive user experience.
+<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap Framework</a> was used for general styling and designing. 
 
-**May 28 2024:** Fix Mongo and Links installs
+ ###### Navigation and Hero Section
+ I chose to use a bold and welcoming hero section for the start of the page using the Bootstrap Jumbotron.
 
-**April 26 2024:** Update node version to 16
+This gives a clear indication of the content as well as imagery that links to the brand and identity of the organisation.
 
-**September 20 2023:** Update Python version to 3.9.17.
+Within this section I have included two buttons that present easy to navigate options for the user to access the relevant section of the page for their needs.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="assets/images/navbar.png">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+###### Bootstrap Cards
+I utilise the bootstrap cards option to describe three R's (recycle, reuse, reduce) of safeguarding Earth.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+##### Footer
+For the footer again I implemented a Bootstrap component.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src="assets/images/footer.png">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Here I have used the bold contrast of the blue shades to distinguish it apart from the rest of the page allowing it to be easily identifiable across the whole website.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+##### Responsive Design
+Utilising the Bootstrap Framework allowed for an implementation that is responsive without the need for additional CSS or media queries.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Though it took some experimentation and troubleshooting, I have been able to create a page that is fully responsive to modern standards.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Technologies Used
+#### Languages Used
++ HTML5
++ CSS3
+#### Frameworks, Libraries, Technologies & Programs Used
++ GitHub - used to save and store all files for this website
++ Git - used for version control
++ Google Fonts - fonts were imported from here
++ Google Dev Tools - to debug and for testing responsiveness
++ W3C Validator - for validating the HTML and CSS code
+## Deployment
+### How to Deploy
+GitHub was used to deploy the website. These were the steps taken to acheive this:
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. Login to GitHub account
+2. Navigate to the project repository, project-1-safeguarding-bgg
+3. Click the Settings button near the top of the page
+4. In the left-hand menu, find and click on the Pages button
+5. In the Source section, choose 'main' from the drop-down, select branch menu
+6. Select 'root' from the drop-down folder menu
+7. Click 'Save' and after a few moments the project will have been made live and a link is visible at the top of the page
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Credits
+### Content References
+1. The theoratically material was taken from google search.
+2. The reasons section was taken from <a href="https://friendsoftheearth.uk/">Friends of UK</a>.
+3. The video and Three R's were taken from <a href="https://oceanservice.noaa.gov/ocean/earthday.html">Protecting Our Planet</a>.
+4. Designs and formatting was taken from "love Running" and "Rose" projects.
+5. Readme Format inspired from <a href="https://github.com/TheRickyroy/astronauts-for-autism/blob/main/README.md#ux-design">Autism Project</a>.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Acknowledgements
+1. I  would like to acknowledge my Code Institute facilitator, Shelly Maughan, for her calming presence and advice.
+2.   I  would like to acknowledge my collegues of code Institute for their help and support, specially Matthew Edwards for helping me at various stages.
