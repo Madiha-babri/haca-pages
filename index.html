@@ -1,73 +1,75 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="geography, quiz, questionaire, world, map">
+    <meta name="keywords" content="geography, questionaire, worldwide">
 
-    <!-- font awesome and google fonts -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
-
+    <!--stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>General Knowledge</title>
+
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Pavaloi Vasilica-Catalin">
+
+    <!--Project Title & background-->
+
+    
 </head>
 
 <body>
+    <!--Logo & Header-->
     <main class="container">
-        <!-- logo -->
-        <section id="logo">
-        </section>
 
-        <!-- intro -->
-        <section id="intro">
-            <ul>
-                <li class="li1"> Click "lets check" to find out your General knowledge level by answering 10 simple questions.</li>
-            </ul>
-
-        </section>
-
-        <!-- start button -->
-        <section id="start">
-            <button id="start-button"> LETS CHECK </button>
-        </section>
-
-
-        <!-- quiz game area -->
-        <section id="game" class="hide">
-            <span id="question"></span>
-            <br>
-            <div id="qbuttons">
-                <button class="btn"></button>
-                <button class="btn"></button>
-                <br>
-                <button class="btn"></button>
-                <button class="btn"></button>
-            </div>
-        </section>
-    <!--Next Button-->
-        <button id="next-btn" data-type="submit" class="next-btn hide">Next Question</button>
-        <!--Number of the question-->
-        <div class="question-counter">
-            <p><span id="question-number">1</span>/<span>10</span></p>
+        <h1>General knowledge</h1>
+       
+    <div id="intro">
+            <h2> Click Lets Check to find out level of your knowledge by answering 10 simple questions!</h2> 
         </div>
-    </div>
-    <!--Result Display-->
-    <div id="result-box" class="hide">
-        <p>You achieved the score of: <span id="user-score">0</span>/10!</p>
+
+     <!--Game field-->
+     
+     <div class="game-area">
+        <button id="start-game" class="start-game">Lets Check!</button>
+        <div id="question" class="hide">question goes here!</div>
         <br>
-        <div id="personal-message">Personal message</div>
-        <button id="start-new-game-btn">Start a New Questionaire!</button>
+        <div id="answer-buttons" class="btn-grid hide">
+            <button id="button-a" class="btn">A.</button>
+            <button id="button-b" class="btn">B.</button>
+            <button id="button-c" class="btn">C.</button>
+            <button id="button-d" class="btn">D.</button>
+
+            <!--Submit Button-->
+            <button id="submit-btn" data-type="submit" class="submit-btn">Submit Answer</button>
+            <button id="next-btn" data-type="submit" class="next-btn hide">Next Question</button>
+
+            <!--Number of the question-->
+            <div class="question-counter">
+                <p><span id="question-number">1</span>/<span>10</span></p>
+            </div>
+            </div>
+        <!--Result Display-->
+        <div id="result-box" class="hide">
+            <p>You score is: <span id="user-score">0</span>/10!</p>
+            <br>
+            <div id="personal-message">Personal message</div>
+            <button id="start-new-game-btn">Start a New Questionaire!</button>
+        </div>
+    </div> 
     </div>
-</div>
-
-
-    <!-- font-awesome -->
-    <script src="https://kit.fontawesome.com/552664b17c.js" crossorigin="anonymous"></script>
-    <!-- scripts -->
-    <script src="assets/js/script.js" defer></script>
-
+</main>
+    
+    <script src="https://kit.fontawesome.com/57a5431661.js" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/questionaire.js"></script>
 </body>
 
 </html>

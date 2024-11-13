@@ -1,36 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Barlow:wght@300&family=Lato:wght@300&family=Merriweather&family=Oswald&family=PT+Sans+Caption&family=Playfair+Display&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Nunito:ital,wght@0,300;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-}
-/* style for body and footer */
-html,
-body {
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 body {
-  background-color: #c9d4dd;
-  background-position: right center;
-  width: 100%;
-  background-size: cover;
-  background-attachment: fixed;
+    background: url("../images/background.jpg");
+    font-family: "Nunito", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
 }
 
-
-
-.socials li a i {
-  margin-right: 8px;
-  margin-top: 20px;
+/* TITLE */
+h1 {
+    margin: 30px 0 30px 0;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    color: rgb(18, 6, 185);
 }
 
-.container {
-  position: relative;
-  color: rgb(181, 6, 6);
-  text-align: left;
+h2 {
+  margin: 5px 0 30px 0;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(18, 6, 185);
 }
 
-/* intro */
+#intro {
+  padding-top: 30px;
+}
 
 #intro ul {
   padding: 1em;
@@ -39,200 +52,428 @@ body {
 
 #intro ul li {
   font-family: Merriweather, sans-serif;
-  text-align: left;
+  text-align: center;
   font-size: 22px;
 }
 
-.li1 {
-  color: #3a7cae;
-  padding-bottom: 30px;
-
-}
-/* about game section */
-#about-game {
-  font-family: Merriweather, sans-serif;
-  text-align: center;
-  font-size: 35px;
-  color: silver;
-  margin: 3% auto;
-}
-
-/* start button styling */
-#start-button:hover {
-  transform: scale(1.3);
-}
-
-#start-button {
-  border: 2px outset silver;
-  text-align: center;
-  font-size: 90%;
-  background-color: rgb(198, 4, 4);
-  color: white;
-  font-weight: 550;
-  border-radius: 50px;
-  padding: 15px 32px 15px 32px;
-  margin: 0 auto;
-  transition: 0.5s ease-in-out all;
-  display: flex;
-  justify-content: center;
-}
-
-/* CSS for questions and answers */
-.correct{
-  background: green;
-}
-.incorrect{
-  background: red;
+/* MAIN BODY GAME AREA */
+.game-area {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    border-radius: 0.5;
+    border-style: double;
+    border-width: 10px;
+    border-color: rgb(84, 18, 172);
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(51, 107, 51, 0.7);
 }
 
 #question {
-  color: rgb(6, 31, 100);
-  align-items: center;
-  font-size: 25px;
-  margin-left: 5%;
-  margin-top: 20%;
-}
-
-#qbuttons {
-  text-align: center;
-  margin: auto;
-  padding-bottom: 5%;
-  padding-top: 10%;
+    margin: 70px 5px 70px 5px;
+    font-size: 2em;
+    font-weight: 900;
+    color: black;
+    position: center;
 }
 
 .btn {
-  width: 40%;
-  height: 50px;
-  color: navy;
-  background-color: rgb(228, 224, 224);
-  text-align: center;
-  font-family: Merriweather, sans-serif;
-  display: inline-block;
-  margin: 10px;
-  font-weight: 100;
-  font-size: 15px;
-  position: relative;
-  border-radius: 25px 0 25px 0;
+    width: 45%;
+    height: fit-content;
+    font-family: inherit;
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+    margin: 5px 10px;
+    font-size: 1.4em;
+    background-color: #76eede;
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #990303;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: honeydew;
 }
 
 .btn:hover {
-  box-shadow: 0px 5px 15px 0 rgb(158, 214, 94) inset,
-    0px 5px 15px 0 rgb(158, 214, 94) inset;
+    outline: 3px solid #4d0000;
+    background-color: #bfc935;
 }
 
-.btn:active {
-  box-shadow: 0px 5px 15px 0 rgb(158, 214, 94) inset;
-  transform: translateY(2px);
+.btn:disabled {
+    color: #000000;
+}
+
+/* Submit Answer Button */
+.submit-btn {
+    display: grid;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.3em;
+    background-color: #006487;
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #990303;
+    cursor: pointer;
+    font-weight: 900;
+    color: honeydew;
+}
+
+.submit-btn:hover {
+    outline: 3px solid #4d0000;
+    background-color: #d9ff00;
 }
 
 /* Next Question Button */
 .next-btn {
-  display: grid;
-  padding: 10px 20px;
-  text-align: center;
-  margin: auto;
-  margin-top: 70px;
-  font-size: 1.3em;
-  background-color: #006487;
-  border-radius: 35px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #990303;
-  cursor: pointer;
-  font-weight: 900;
+    display: grid;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 70px;
+    font-size: 1.3em;
+    background-color: #006487;
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #990303;
+    cursor: pointer;
+    font-weight: 900;
 }
 
 .next-btn:hover {
-  outline: 3px solid #4d0000;
-  background-color: #00bbff;
-}
-/* restart button styling */
-#restart-button:hover {
-  transform: scale(1.3);
+    outline: 3px solid #4d0000;
+    background-color: #00bbff;
 }
 
-#restart-button {
-  border: 2px outset rgb(57, 15, 206);
-  text-align: center;
-  font-size: 90%;
-  background-color: rgb(198, 4, 4);
-  color: white;
-  border-radius: 50px;
-  padding: 15px 32px 15px 32px;
-  margin: 0 auto;
-  margin-top: 5%;
-  margin-bottom: 8%;
-  transition: 0.5s ease-in-out all;
-  display: flex;
-  justify-content: center;
+/* Start Game Button */
+.start-game {
+    display: flex;
+    justify-content: center;
+    margin: 250px auto;
+    font-size: 25px;
+    font-weight: 600;
+    border-width: 3px;
+    border-color: #990303;
+    cursor: pointer;
+    top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #e2e9e2;
+    border-radius: 35px;
+    border-style: solid;
+    color: rgb(45, 9, 204);
+    position: relative;
 }
 
-/* results styling */
-#results {
-  text-align: center;
-  background-image: url("../images/result-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right center;
-  max-width: 70%;
-  margin-top: 2em;
+.start-game:hover {
+    outline: 3px solid #4d0000;
+    background-color: #e6f756;
 }
 
-#final-result {
-  padding: 1em;
-  font-size: 25px;
-  color: white;
-  text-align: center;
-  width: 85%;
-  margin: 0 auto;
+/* Question Counter */
+.question-counter {
+    margin: 10px 0 35px 0;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: honeydew;
+    position: center;
+}
+
+.dead-space {
+    height: 400px;
+}
+
+/*404 page*/
+#error404 {
+    color: whitesmoke;
+}
+
+.paragraph {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    color: antiquewhite;
+}
+
+#centerbu {
+    text-align: center;
+}
+
+.homebu {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 14px 28px;
+    font-size: 22px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+    position: absolute;
+}
+
+.homebu :hover {
+    background-color: rgb(49, 49, 49);
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+/* RESULT BOX */
+#result-box {
+    font-size: 1.4em;
+    font-weight: 900;
+    margin: 70px 40px 70px 40px;
+    background-color: rgba(255, 115, 34, 0.904);
+    padding: 30px;
+    border-radius: 35px;
+    border-style: solid;
+    border-color: rgb(0, 87, 87);
+    border-width: 3px;
+}
+
+#person-message {
+    margin-top: 30px;
+}
+
+#start-new-game-btn {
+    display: grid;
+    top: 30px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 1.3em;
+    background-color: rgb(0, 214, 0);
+    border-radius: 35px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgreen;
+    cursor: pointer;
+}
+
+/* up the screen dead space for devices from 780px of full height to larger devices and monitors */
+@media screen and (min-height: 780px) {
+    .dead-space {
+        height: 650px;
+    }
 }
 
 .hide {
-  display: none !important;
+    display: none;
 }
 
-/* media screen sizes 960 and below */
-@media screen and (max-width: 960px) {
-  #logo img {
-    width: 70%;
-    height: auto;
-  }
+/* Change screen size from larger to Medium size devices from 580px down" */
+@media screen and (max-width: 580px) {
+    header button {
+        font-size: 1.1em;
+    }
 
-  #intro {
-    clear: left;
-    text-align: center;
-  }
+    #question {
+        margin: 20px 5px 20px 5px;
+        font-size: 1.3em;
+    }
 
-  #start-button {
-    text-align: center;
-  }
+    .btn {
+        height: fit-content;
+        letter-spacing: 1.2px;
+        width: 65%;
+        font-size: 1.2em;
+    }
 
-  #question {
-    text-align: center;
-  }
+    #start-new-game-btn {
+        top: 30px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
 
-  .btn {
-    width: 90%;
-    text-align: center;
-  }
+    .next-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
 
-  #results {
-    max-width: 80%;
-  }
+    .submit-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
 
-  #intro ul {
-    background-color: rgb(8, 22, 33, 0.85);
-    max-width: 100%;
-  }
+    .start-game {
+        margin: 200px auto;
+        font-size: 2.0em;
+        font-weight: 700;
+        padding: 10px;
+    }
+
+    .question-counter {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    #result-box {
+        font-size: 1.2em;
+    }
+
+    #person-message {
+        margin-top: 30px;
+    }
+
+    #start-new-game-btn {
+        font-size: 1.2em;
+    }
+
+    /*404 page*/
+    #error404 {
+        font-size: 50px;
+    }
+
+    .paragraph {
+        font-size: 40px;
+    }
 }
 
-@media screen and (max-width: 800px) {
-  #intro {
-    padding-top: 0;
-  }
+/* Change screen size from larger to Medium size devices from 460px down" */
+@media screen and (max-width: 460px) {
+    header button {
+        font-size: 1.1em;
+    }
 
-  #results {
-    max-width: 100%;
-    background-position: center center;
-  }
+    .hidden-instructions {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        font-size: 1.3em;
+    }
+
+    h1 {
+        margin: 10px 5px 5px 5px;
+        font-size: 3em;
+    }
+
+    #question {
+        margin: 20px 5px 20px 5px;
+        font-size: 1.2em;
+    }
+
+    .btn {
+        margin: 3px;
+        padding: 3px;
+        width: 80%;
+        letter-spacing: 1.2px;
+        font-size: 1.0em;
+        height: fit-content;
+    }
+
+    #start-new-game-btn {
+        top: 30px;
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
+
+    .next-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    .submit-btn {
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    .question-counter {
+        font-size: 1.0em;
+        margin-bottom: 20px;
+    }
+
+    #result-box {
+        font-size: 1.1em;
+    }
+
+    #person-message {
+        margin-top: 30px;
+    }
+
+    #start-new-game-btn {
+        font-size: 1.0em;
+    }
+
+    .dead-space {
+        height: 200px;
+    }
+}
+
+
+/* Change screen size from larger to Medium size devices from 300px down" */
+@media screen and (max-width: 300px) {
+    header button {
+        font-size: 1.1em;
+    }
+
+    h1 {
+        margin: 10px 5px 5px 5px;
+        font-size: 2.6em;
+    }
+
+    #question {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+    }
+
+    #start-new-game-btn {
+        font-size: 1.0em;
+    }
+
+    .next-btn {
+        font-size: 1.0em;
+    }
+
+    .submit-btn {
+        font-size: 1.0em;
+    }
+
+    .start-game {
+        margin: 200px auto;
+        padding: 10px 10px;
+        font-size: 1.6em;
+        font-weight: 700;
+        width: 85%;
+    }
+
+    .question-counter {
+        font-size: 1.0em;
+        margin-bottom: 20px;
+    }
+
+    #result-box {
+        font-size: 1.0em;
+        width: unset;
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #start-new-game-btn {
+        font-size: 1.0em;
+    }
 }
